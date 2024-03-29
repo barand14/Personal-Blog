@@ -1,55 +1,58 @@
-* {
-    background-color: honeydew ;
-    color: gray;
-
-}
-
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: honeydew;
+    color: honeydew;
+  }
+  
+  .dark-mode {
+    background-color: gray;
     color: gray;
-}
-
-.dark-mode {
-    background-color: #333;
-    color: #fff;
-    border-color: #555;
+    border-color: gray;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-
-
-.light-mode {
+  }
+  
+  .light-mode {
     background-color: honeydew;
+    color: honeydew;
+  }
+  
+  .dark-mode button,
+  .dark-mode input[type="text"],
+  .dark-mode textarea {
+    background-color: inherit; /* Inherit from parent's background color */
+    color: honeydew;
+  }
+  
+  .dark-mode header,
+  .dark-mode footer,
+  .dark-mode pre {
+    background-color: gray;
     color: gray;
-
-}
-
-.dark-mode button,
-.dark-mode input[type="text"],
-.dark-mode textarea {
-  background-color: #555;
-  color: #fff;
-}
-
-.dark-mode header,
-.dark-mode footer {
-  background-color: #222;
-  color: #fff;
-}
-
-.dark-mode pre {
-    background-color: #444;
-    color: #ccc;
-  }
-
-  .dark-mode .error-message {
-    color: blueviolet
   }
   
+  .error-message { /* More generic selector for error message color */
+    color: blueviolet;
+  }
   
-
-
-
-
+  #blog-form input,
+  #blog-form textarea {
+    width: 100%;
+    padding: 0.5em;
+  }
+  
+  #blog-form button {
+    display: block;
+    margin-top: 1em;
+    padding: 0.5em;
+  }
+  
+  #blog-form label {
+    display: block;
+    margin-top: 1em;
+  }
+  
+  .blog-title {
+    width: 50%;
+    margin: 0 auto;
+    color: black;
+  }

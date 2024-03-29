@@ -1,22 +1,17 @@
-#blog-form input,
-#blog-form textarea {
-    width: 100%;
-    padding: 0.5em;
+const blogpost= document.getElementById("blogPosts")
+const postarray= JSON.parse(localStorage.getItem("postarray")) || []
+
+for(const i = 0; i < postarray.length; i++){
+    const blogDiv = document.createElement("div")
+
+    const userEl = document.createElement("h2")
+    userEl.textContent = postarray[i].uservalue
+
+    // grab titlevalue and contentvalue
+    const titleEl = document.createElement("h2")
+    userEl.textContent = postarray[i].titlevalue
+
+   
+    blogpost.appendChild(userEl)
+    //blogpost.append(titleEl)
 }
-
-#blog-form button {
-    display: block;
-    margin-top: 1em;
-    padding: 0.5em;
-
-}
-
-#blog-form label {
-    display: block;
-    margin-top: 1em;
-}
-
-.blog-title {
-    width: 50%;
-    margin: 0 auto;
-}    
