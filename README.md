@@ -1,7 +1,7 @@
 # Personal-Blog
 In this challenge, I've created a two-page website where users will input and view blog posts. It includes building a content form, dynamically rendering blog posts, and implementing a light/dark mode toggle. As you code.
 
-##
+## light mode page
 ![Screenshot 2024-04-03 081016](https://github.com/barand14/Personal-Blog/assets/151784712/12235a32-efa8-4392-93dd-8d8a321e96fd)
 
 ##
