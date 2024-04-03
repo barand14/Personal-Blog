@@ -1,19 +1,28 @@
-const blogPosts= document.getElementById("blogPosts");
-const postarray= JSON.parse(localStorage.getItem("postarray")) || []
+const savedPostsContainer = document.getElementById("blogPosts");
+//Retrieving posts from local storage or initializing as empty array
+let postArray = JSON.parse(localStorage.getItem("postarray")) || [];
 
-for(let i = 0; i < postarray.length; i++){
-    const blogDiv = document.createElement("div");
+// Function to display saved posts
+function displaySavedPosts() {
+    // Clear previous content
+    savedPostsContainer.innerHTML = "";
 
-    const userEl = document.createElement("h2");
-    userEl.textContent = postarray[i].uservalue;
+    if (postArray.length === 0) {
+        savedPostsContainer.innerHTML = "<p>No saved posts yet!</p>";
+        return;
+    }
 
-    // grab titlevalue and contentvalue
-    const titleEl = document.createElement("h2");
-    userEl.textContent = postarray[i].titlevalue;
-
-   
-    blogDiv.appendChild(userEl);
-    blogDiv.append(titleEl);
-
-    blogPosts.appendChild(blogDiv);
+    postArray.forEach(post => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("post");
+        postElement.innerHTML = `
+            <h3>${post.title}</h3>
+            <p>By: ${post.username}</p>
+            <p>${post.content}</p>
+        `;
+        savedPostsContainer.appendChild(postElement);
+    });
 }
+
+//display saved posts on page load
+displaySavedPosts();
